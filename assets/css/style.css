@@ -24,6 +24,14 @@
     margin-top: -150px;
 
   }
+
+  .col-md-2{
+    padding: 10px;
+    text-align: center;
+
+  }
+
+
 }
 
 
@@ -45,6 +53,9 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   font-family: "poppins";
 }
 
+h2{
+  font-weight: bold;
+}
 .section {
   padding: 7rem 0;
 }
