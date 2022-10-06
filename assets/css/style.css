@@ -8,6 +8,25 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+@media only screen and (max-width: 600px) {
+
+  .navbar-brand{
+    margin-left: 30px;
+  }
+  .burger{
+    margin-right: 30px;
+  }
+
+  .section.pb-5{
+    margin-top: -100px;
+  }
+  .col-md-4.ml-auto.order-2.aos-init.aos-animate{
+    margin-top: -150px;
+
+  }
+}
+
+
 body {
   font-family: 'Poppins';
   color: #0d1e2d;
@@ -521,4 +540,8 @@ video {
 
 .abt{
   margin-top: 30%;
+}
+
+.readmore{
+  margin: 10px;
 }
