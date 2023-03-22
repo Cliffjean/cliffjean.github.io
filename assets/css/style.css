@@ -556,3 +556,13 @@ video {
 .readmore{
   margin: 10px;
 }
+
+#ball{
+  position: absolute;
+  border-radius:1000px;
+  background: #03ABEB;
+  width:20px;
+  height: 20px;
+  top:0px;
+  left: 0px;
+}
