@@ -109,6 +109,8 @@
   });
 })()
 
+/** BALL */
+
 var easing = 0.01;
 var easingTargetX=5;
 var easingTargetY=5;
@@ -118,3 +120,59 @@ var canvas = document.getElementById("c");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 var ctx = canvas.getContext('2d');
+
+
+
+
+function main(){
+
+  if(easingTargetX == (ballx+10) && easingTargetY == (bally+10)  ) return;
+  start(); 
+  
+  window.setTimeout(main, 200);
+}
+window.addEventListener('mousemove', function(e){
+  
+  easingTargetX = e.clientX;
+  easingTargetY = e.clientY;
+  main();
+
+  //drawballLine(ballx, bally);
+
+});
+
+function start(sx, sy){
+
+ 
+  if(typeof sx != 'undefined'){
+
+    easingTargetX = sx;
+    easingTargetY = sy;
+  }
+
+
+  vx = (easingTargetX - ballx) * easing;
+  vy = (easingTargetY - bally) * easing;
+
+  ballx += vx; bally += vy;
+   
+  ball.style.left = ballx - 10 +'px';
+  ball.style.top = bally - 10 + 'px';
+
+ 
+}
+
+window.addEventListener('dragover',function(e){
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+});
+
+function drawballLine(ax, ay){
+
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.beginPath();
+  ctx.moveTo(easingTargetX, easingTargetY);
+  ctx.lineTo(ax,ay);
+  ctx.stroke();
+
+}
+ 
