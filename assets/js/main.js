@@ -107,7 +107,9 @@
       mirror: false
     })
   });
- var easing = 0.01;
+})()
+
+var easing = 0.01;
 var easingTargetX=5;
 var easingTargetY=5;
 var vx=0, vy = 0, ballx = 0 ,bally=0;
@@ -116,4 +118,3 @@ var canvas = document.getElementById("c");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 var ctx = canvas.getContext('2d');
-})()
